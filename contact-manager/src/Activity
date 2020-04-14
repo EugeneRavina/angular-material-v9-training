@@ -1,0 +1,24 @@
+Activity For Pop up / Dialogs
+
+  - create a modal component
+  - create a dialog component
+  - dialog input
+    Personal Information - header
+         - First Name
+         - Last Name
+         - Birthday
+    Address
+         - Street
+         - City - List []
+         - ZipCode
+         - Country - List []
+
+
+
+Activity for  Mat-Table
+
+  - create transaction table component 
+  - Add Filtering 
+  - Add sort
+  - Add pagination
+  - Add Foot row table

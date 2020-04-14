@@ -1,0 +1,23 @@
+<div mat-dialog-title class="header with-icon">
+    {{data.title}}<span> <mat-icon color="{{data.issueType.color}}">{{data.issueType.icon}}</mat-icon></span>
+</div>
+<div mat-dialog-content>
+  <h3>{{data.ticketId}}</h3>
+  <mat-form-field class="input-width">
+    <mat-label>Description</mat-label>
+    <input matInput value="{{data.description}}">
+  </mat-form-field>
+  
+  <div class="with-icon">
+      Priority: 
+    <mat-icon color="{{data.priority.color}}">{{data.priority.icon}}</mat-icon> <span>{{data.priority.name}}</span>
+  </div>
+ 
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Ok</button>
+</div>
+

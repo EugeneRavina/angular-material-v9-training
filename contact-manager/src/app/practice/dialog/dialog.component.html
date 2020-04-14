@@ -1,0 +1,59 @@
+
+<!-- <mat-dialog-container class="md-dialog-container"> -->
+<div mat-dialog-content class="mat-dialog">
+  <h2>Personal Informantion</h2>
+  <mat-form-field class="input-width">
+    <mat-label>First Name</mat-label>
+    <input matInput [(ngModel)]="data.firstName">
+  </mat-form-field>
+  <mat-form-field class="input-width">
+    <mat-label>Last Name</mat-label>
+    <input matInput [(ngModel)]="data.lastName">
+  </mat-form-field>
+  <mat-form-field class="input-width">
+    <mat-label>Phone Number</mat-label>
+    <input matInput [(ngModel)]="data.cpNo">
+  </mat-form-field>
+<!--   
+  <mat-form-field class="input-width">
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [(ngModel)]="data.birthDate">
+  </mat-form-field>
+   -->
+   <mat-form-field class="input-width">
+    <mat-label>Date of Birth</mat-label>
+    <input matInput [matDatepicker]="picker" readonly [(ngModel)]="data.birthDate" >
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  
+  <h2>Address</h2>
+  <mat-form-field class="address" >
+    <mat-label>Street</mat-label>
+    <input matInput [(ngModel)]="data.street">
+  </mat-form-field>
+  <mat-form-field class="address">
+    <mat-label>City</mat-label>
+    <mat-select  [(ngModel)]="data.city" >
+    <mat-option *ngFor="let city of cities" [value]="city.viewValue">{{city.viewValue}}</mat-option>
+    </mat-select> 
+  </mat-form-field>
+
+  <mat-form-field class="address">
+    <mat-label>Zip Code</mat-label>
+    <input matInput [(ngModel)]="data.zip">
+
+  </mat-form-field>
+  <mat-form-field class="address">
+    <mat-label>Country</mat-label>
+    <mat-select  [(ngModel)]="data.country" >
+    <mat-option *ngFor="let country of countries" [value]="country.viewValue">{{country.viewValue}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
+<!-- </mat-dialog-container> -->

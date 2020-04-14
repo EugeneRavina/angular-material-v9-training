@@ -1,0 +1,83 @@
+<div class="stepper-body">
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+
+
+        <mat-form-field class="form-field">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First name" formControlName="firstName" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+            <mat-label>Middle Name</mat-label>
+            <input matInput placeholder="Middle Name">
+          </mat-form-field>
+
+          <mat-form-field class="form-field">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last name" formControlName="lastName" required>
+          </mat-form-field>
+
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field class="form-field">
+          <mat-label>Street 1</mat-label>
+          <input matInput formControlName="street" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        
+        <mat-form-field class="form-field">
+            <mat-label>City</mat-label>
+            <mat-select >
+              <mat-option *ngFor="let city of cities" [value]="city.value">
+                {{city.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="form-field">
+            <mat-label>Zip Code</mat-label>
+            <input matInput placeholder="ex. 11001, 16301" maxlength="5" formControlName="zip" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-field">
+            <mat-label>Country</mat-label>
+            <mat-select >
+              <mat-option *ngFor="let code of zipCodes" [value]="code.value">
+                {{code.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

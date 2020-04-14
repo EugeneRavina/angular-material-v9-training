@@ -1,0 +1,40 @@
+<mat-sidenav-container class="example-container dark-theme" 
+[class.dark-theme]="isDarkTheme" [dir]="dir">
+
+
+
+
+    <mat-sidenav #sidenav mode="side" opened>
+                 <mat-toolbar color="primary">
+                  <span>Contact Manager</span>
+                  </mat-toolbar>
+                <mat-list role="list">
+                  <mat-list-item *ngFor="let contact of contacts">
+                    <a class="contacts">
+                    <img class="image-circle" [src]="userImage(contact.id)" width="30px" height="30px">
+                    <span>{{contact.name}}</span>
+                  </a>
+                  </mat-list-item >
+                </mat-list>
+                  
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div class="toolbar">
+        <app-main-toolbar
+          (toggleTheme)="toggleTheme()"
+          (toggleDir)="toggleDir()"> </app-main-toolbar>
+      </div>
+      
+    <div class="content">
+      <app-main-content> </app-main-content>
+    </div>
+  
+  
+  
+  
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  

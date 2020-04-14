@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Contact Person</h1>
+<div mat-dialog-content>
+  <h3>User Name: {{data.username}}</h3>
+    <h3>Full Name: {{data.name}}</h3>
+    <h3>Email : {{data.email}}</h3>
+    <h3>Contact Number: {{data.phone}}</h3>
+    <h3>Website: {{data.website}}</h3>
+    
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button cdkFocusInitial>Ok</button>
+</div>
