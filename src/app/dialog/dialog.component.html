@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">Contact Manager <span class ="example-spacer"></span>
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu> 
+</mat-toolbar>
+  <ol>
+    <h1>Personal Information</h1>
+    <button mat-raised-button (click)="openDialog()">Add Personal Information</button>
+ 
+  </ol>    
+    <br><li *ngIf="firstName">
+      First Name: <b>{{firstName}}</b>
+    </li>
+    <li *ngIf="lastName">
+      Last Name: <b>{{lastName}}</b>
+    </li>
+    <li *ngIf="birthday">
+      Birthday: <b>{{birthday}}</b>
+    </li>
+    <li *ngIf="street">
+      Street: <b>{{street}}</b>
+    </li>
+    <li *ngIf="city">
+      City: <b>{{city}}</b>
+    </li>
+    <li *ngIf="zipcode">
+      Zip Code: <b>{{zipcode}}</b>
+    </li>
+    <li *ngIf="country">
+      Country: <b>{{country}}</b> 
+    </li>
+ 
+  

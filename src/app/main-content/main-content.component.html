@@ -1,0 +1,13 @@
+<div class = "flex" *ngIf="users">
+    <mat-card class ="example-card mat-elevation-z10" *ngFor="let user of users">
+
+        <div class ="contact-card-header">
+            <img class = "image-circle" [src]="userImage(user.id)" width ="100px" height ="100px">
+        </div>
+
+        <div class = "contact-card-content">
+            <h2 style ="font-weight: bold;">{{ user.name }}</h2>
+        </div>
+        
+    </mat-card>
+</div>
