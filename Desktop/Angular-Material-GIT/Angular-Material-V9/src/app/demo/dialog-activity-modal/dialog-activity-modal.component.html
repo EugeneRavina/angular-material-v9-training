@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Personal Information</h1>
+<div mat-dialog-content>
+ 
+  <mat-form-field>
+    <mat-label>First Name</mat-label>
+    <input matInput [(ngModel)]="data.firstName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input matInput [(ngModel)]="data.lastName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Birthday</mat-label>
+    <input matInput [(ngModel)]="data.birthday">
+  </mat-form-field>
+
+
+<h1 mat-dialog-title>Address</h1>
+
+    <mat-form-field>
+        <mat-label>Street</mat-label>
+        <input matInput [(ngModel)]="data.street">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input matInput [(ngModel)]="data.city">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Zipcode</mat-label>
+        <input matInput [(ngModel)]="data.zip">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Country</mat-label>
+        <input matInput [(ngModel)]="data.country">
+      </mat-form-field>
+</div>
+
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Back</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

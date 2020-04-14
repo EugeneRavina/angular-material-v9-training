@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Personal Information</h1>
+<div *ngIf="personalInfo">
+  Name: {{personalInfo.firstName}} {{personalInfo.lastName}} <br>
+  Birthday: {{personalInfo.birthday}} <br>
+  <h1>Address:</h1>
+  {{personalInfo.street}} {{personalInfo.city}} {{personalInfo.zip}} {{personalInfo.country}} 
+</div>
+<button mat-raised-button (click)="openDialog()">Add Information</button>
