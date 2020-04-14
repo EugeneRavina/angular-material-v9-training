@@ -1,0 +1,11 @@
+<div class="flex" *ngIf="userList">
+    <mat-card class="example-card mat-elevation-z10" *ngFor="let user of userList">
+    <div class="contact-card-header">
+      <img class="image-circle" [src]="userImage[user.id]" alt="image">
+    </div>
+    <div class="justify-content-center">
+      <h2>{{user.name}}</h2>
+    </div>
+    <button mat-raised-button (click)="openDialog(user)">Check me</button>
+  </mat-card>
+</div>

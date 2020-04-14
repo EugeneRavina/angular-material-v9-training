@@ -1,0 +1,42 @@
+@import '~@angular/material/core/theming/_all-theme';
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+}
+.example-card{
+    width: 250px;
+    min-height: 200px;
+    max-height: 300px;
+    margin:20px;
+}
+.contact-card-header{
+    display:flex;
+    background-color: blue($color: #000000);
+    justify-content: center;
+}
+.contact-card-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+.justify-content-center{
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+}
+.image-circle{
+    border-radius: 100px;
+}
+
+@include mat-core();
+.dark-theme {
+    // Dark theme
+    $app-dark-primary: mat-palette($mat-pink, 700);
+    $app-dark-accent: mat-palette($mat-blue-grey);
+    $app-dark-theme: mat-dark-theme($app-dark-primary, $app-dark-accent);
+
+    @include angular-material-theme($app-dark-theme);
+}

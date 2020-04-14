@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{data.title}}</mat-card-title>
+      <mat-card-subtitle>{{data.ticketId}}</mat-card-subtitle>
+      <mat-card-subtitle>{{data.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-icon color="{{data.priority.color}}">{{data.priority.icon}}</mat-icon>
+        <h3>{{data.priority.name}}</h3>
+        <mat-icon color="{{data.priority.color}}">{{data.issueType.icon}}</mat-icon>
+        <h3>{{data.issueType.name}}</h3>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+    </mat-card-actions>
+  </mat-card>

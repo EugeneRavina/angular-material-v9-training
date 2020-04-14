@@ -1,0 +1,48 @@
+#wew .mat-icon{
+    font-size:30px;
+}
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-container {
+    width: 200px;
+    height: 100%;
+  }
+
+  .example-events {
+    width: 100px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+  }
+  .flex-container{
+    direction: flex;
+    flex-direction: row;
+  }
+  .example-button-row button,
+.example-button-row a {
+    margin-right: 8px;
+}
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.sample-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+  .wrapper{
+    margin: 15px;
+}

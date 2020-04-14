@@ -1,0 +1,15 @@
+<ol>
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="name">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <mat-form-field>
+        <mat-label>Animal</mat-label>
+        <input matInput [(ngModel)]="animal">
+      </mat-form-field>
+  </ol>

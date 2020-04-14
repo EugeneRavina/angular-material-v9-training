@@ -1,0 +1,75 @@
+<!-- <mat-sidenav #sidenav mode="side" class="app-sidenav mat-elevation-z10" opened>
+  <mat-toolbar color="primary">
+    
+  </mat-toolbar>
+  <mat-list *ngFor="let user of userList" role="list">
+    <mat-list-item role="listitem">{{user.name}}</mat-list-item>
+    
+  </mat-list>
+</mat-sidenav>
+<mat-sidenav-container class="sample-container">
+  <mat-sidenav #sidenav mode="side" class="app-sidenav mat-elevation-z10" opened>
+    <mat-toolbar color="primary">
+      Contacts
+    </mat-toolbar>
+    <mat-list role="list">
+      <mat-list-item role="listitem">Item 1</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="wrapper">
+
+      <app-activitymodal></app-activitymodal>
+      <app-activitytable></app-activitytable>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ -->
+ <mat-sidenav-container [class.dark.theme]="isDarkTheme" class="sample-container" [dir]="dir" >
+  <mat-sidenav  #sidenav mode="side" class="app-sidenav mat-elevation-z10" opened>
+    <mat-toolbar color="primary">
+      Activities
+    </mat-toolbar>
+    <mat-list role="list">
+     
+     
+    
+      <mat-list-item> <a [routerLink]="['/activity1']"><button mat-raised-button color="primary">Activity1 </button></a></mat-list-item>
+      <mat-list-item> <a [routerLink]="['/activity2']"><button mat-raised-button color="primary"> Activity2 </button></a> </mat-list-item>
+      <mat-list-item> <a [routerLink]="['/activity3']"><button mat-raised-button color="primary">Activity3 </button> </a></mat-list-item>
+      <mat-list-item> <a [routerLink]="['/activity4']"><button mat-raised-button color="primary"> Activity4 </button></a> </mat-list-item>
+      <mat-list-item> <a [routerLink]="['/dragdrop']"><button mat-raised-button color="primary"> Drag and Drop </button></a> </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>Contact Manager</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button (click)="ChangeDir()" mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Change direction</span>
+          </button>
+          <button (click)="ChangeTheme()" mat-menu-item>
+            <mat-icon>voicemail</mat-icon>
+            <span>Change Theme</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div class="wrapper">
+     <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

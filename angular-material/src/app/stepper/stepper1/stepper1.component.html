@@ -1,0 +1,72 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}} CLICK ME TO START
+  </button>
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>First name</mat-label>
+          <input matInput placeholder="First Name"  required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Middle name</mat-label>
+            <input matInput placeholder="Middle Name" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" required>
+          </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <mat-label>Street</mat-label>
+          <input matInput  placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>City</mat-label>
+            <select matNativeControl required>
+                <option value="Antipolo">Antipolo</option>
+                <option value="Marikina">Marikina</option>
+                <option value="Cainta">Cainta</option>
+                <option value="Pasig">Pasig</option>
+              </select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Zip Code</mat-label>
+            <input matInput  placeholder="Ex. 1 Main St, New York, NY"
+                   required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Country</mat-label>
+            <select matNativeControl required>
+                <option value="Philippines">Philippines</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+              </select>
+          </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>

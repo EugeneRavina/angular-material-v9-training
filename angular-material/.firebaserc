@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularmaterial-c8798": {
+      "hosting": {
+        "angular-material": [
+          "angularmaterial-c8798"
+        ]
+      }
+    }
+  }
+}
