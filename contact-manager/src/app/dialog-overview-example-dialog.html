@@ -1,0 +1,78 @@
+<div mat-dialog-content>
+    <!-- <form class="example-form">
+        <h4>Personal Information</h4>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name" value="">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" value="">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Birthday</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <h4>Address</h4>
+        <mat-form-field>
+            <mat-label>Street 1</mat-label>
+            <input matInput formControlName="street" placeholder="Street 1"
+                  required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>City</mat-label>
+            <mat-select formControlName="city">
+              <mat-option *ngFor="let city of cities" [value]="city.value">
+                {{city.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Zip Code</mat-label>
+            <input matInput formControlName="zip" placeholder="Zip Code"
+                  required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="country">
+              <mat-option *ngFor="let country of countries" [value]="country.value">
+                {{country.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+    </form> -->
+    <!-- <h3><b>Name:</b> {{data.name}}</h3>
+    <h3><b>Address:</b> {{data.address.street}}, {{data.address.suite}}, {{data.address.city}}, {{data.address.zipcode}}</h3>
+    <h3><b>Phone:</b> {{data.phone}}</h3>
+    <h3><b>Website:</b> {{data.website}}</h3>
+</div>
+<div mat-dialog-actions>
+   <button mat-button (click)="onNoClick()">Cancel</button> 
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+  <div class="dialog-content">
+    <h1>{{data.title}}</h1>
+
+    <h4><b>Ticket Id: </b>{{data.ticketId}}</h4>
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>{{data.description}}</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <mat-label><b>Priority: </b>{{data.priority.name}}</mat-label>
+    <mat-icon color="{{data.priority.color}}">{{data.priority.icon}}</mat-icon><br>
+    <mat-label><b>Issue Type: </b>{{data.issueType.name}}</mat-label>
+    <mat-icon mat-card-avater color="{{data.issueType.color}}">{{data.issueType.icon}}</mat-icon><br>
+  </div>
+  
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>
