@@ -1,0 +1,13 @@
+<div class="mainContent">
+    <mat-card>
+        <div class="matContent">
+            <h1>{{data.title}}</h1>
+            <h5>{{data.ticketId}}</h5>
+            <mat-form-field><input matInput [(ngModel)]="data.description"></mat-form-field> <br>
+            <mat-icon color="{{data.priority.color}}">{{data.priority.icon}}</mat-icon>{{data.priority.name}}<br><br>
+            <mat-icon color="{{data.issueType.color}}">{{data.issueType.icon}}</mat-icon>{{data.issueType.name}}<br><br>
+            <button mat-button (click)="onNoClick()">Back</button>
+            <button mat-button (click)="onNoClick()">Ok</button>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,88 @@
+<h1 class="titleHeader">KANBAN BOARD</h1>
+
+<div class="dropListGroup" cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <mat-card class="example-box" *ngFor="let item of todo" cdkDrag (click) = "showDialog(item)">
+            <mat-card-header>
+                <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                <mat-card-title style="font-size: 15px">{{item.ticketId}}</mat-card-title>
+                <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>InDev</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="inDev"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <mat-card class="example-box" *ngFor="let item of inDev" cdkDrag (click) = "showDialog(item)">
+            <mat-card-header>
+                <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                <mat-card-title style="font-size: 15px">{{item.ticketId}}</mat-card-title>
+                <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="example-container">
+        <h2>InTest</h2>
+    
+        <div
+          cdkDropList
+          [cdkDropListData]="inTest"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <mat-card class="example-box" *ngFor="let item of inTest" cdkDrag (click) = "showDialog(item)">
+            <mat-card-header>
+                <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                <mat-card-title style="font-size: 15px">{{item.ticketId}}</mat-card-title>
+                <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+            </mat-card-content>
+        </mat-card>
+        </div>
+      </div>
+
+
+      <div class="example-container">
+        <h2>Done</h2>
+    
+        <div
+          cdkDropList
+          [cdkDropListData]="done"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <mat-card class="example-box" *ngFor="let item of done" cdkDrag (click) = "showDialog(item)">
+            <mat-card-header>
+                <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                <mat-card-title style="font-size: 15px">{{item.ticketId}}</mat-card-title>
+                <mat-card-subtitle>{{item.title}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+            </mat-card-content>
+        </mat-card>
+        </div>
+      </div>
+  </div>

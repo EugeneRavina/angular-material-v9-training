@@ -1,0 +1,45 @@
+<mat-sidenav-container class="example-container dark-theme"
+  [class.dark-theme] ="isDarkTheme" [dir] = "dir">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')">
+      <mat-toolbar color="primary">
+        Contacts
+      </mat-toolbar>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+
+    <!--<app-main-toolbar></app-main-toolbar>-->
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <button mat-raised-button color="primary" (click)="sidenav.toggle()"><mat-icon>view_headline</mat-icon></button>
+            <span>Contact Manager</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add</mat-icon>
+                <span>New Contact</span>
+              </button>
+              <button mat-menu-item (click) = "toggleTheme()">
+                <mat-icon>voicemail</mat-icon>
+                <span>Toggle Theme</span>
+              </button>
+              <button mat-menu-item (click) = "toggleDir()">
+                <mat-icon>notifications_off</mat-icon>
+                <span>Toggle DIR</span>
+              </button>
+            </mat-menu>
+          </mat-toolbar-row>
+        </mat-toolbar>
+    
+        <app-main-content></app-main-content>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
