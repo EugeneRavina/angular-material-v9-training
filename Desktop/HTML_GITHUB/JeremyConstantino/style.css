@@ -1,0 +1,25 @@
+datalist {
+    display:none;
+}
+
+input{
+    border-color: burlywood;
+    border-radius: 4%;
+}
+
+h4{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:crimson;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+
+}
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: crimson;
+}

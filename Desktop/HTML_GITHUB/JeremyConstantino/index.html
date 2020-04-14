@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Types</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body class="body">
+    <style>
+      
+        
+    </style>
+    <br><br>
+    <center>
+        <h1>HTML FORM INPUT TYPES</h1>
+    </center>
+         <center> <table border="1" id="forms">
+        <tr>
+            <th>
+                <h4>Input type DataList</h4>
+            </th>
+           <td>
+            <form action="index.html" method="get">
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                  <option value="Internet Explorer">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+                <br>
+                <input type="submit">
+              </form>
+           </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>Input type Color</h4>
+            </th>
+            <td>
+                <form action="/index.php">  
+                    <br>
+                    Pick your Favorite color:  <br> 
+                    <input type="color" name="upclick" value="#a52a2a"> Upclick<br>
+                    <input type="color" name="downclick" value="#f5f5dc"> Downclick  
+                    <br><br>
+                    
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>Input type Date</h4>
+            </th>
+            <td>
+                Select Start and End Date: <br><br>
+            Start date &nbsp;&nbsp;<input type="date" name="Startdate"> <br><br>
+            End date &nbsp;&nbsp;<input type="date" name="Enddate"> <br><br>
+             <input type="submit">
+        
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>Input type DateTime</h4>
+            </th>
+            <td>
+                <label>  
+                    Select the meeting schedule: <br><br>  
+                    Select date & time: <input type="datetime-local" name="meetingdate"> <br><br>  
+                </label>  
+                    <input type="submit">  
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Email
+                </h4>
+            </th>
+            <td>
+
+                <label><b>Enter your Email-address</b></label>  
+                <input type="email" name="email" required>  
+                <input type="submit">  
+                <p><strong>Note:</strong>User can also enter multiple email addresses separating by comma or whitespace as following: </p>  
+                <label><b>Enter multiple Email-addresses</b></label>  
+                <input type="email" name="email"  multiple>  
+            <input type="submit">  
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Month
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <label>Enter your Birth Month-year: </label>  
+                <input type="month" name="newMonth">  
+                <input type="submit"> 
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Number
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <label>Enter your age: </label>  
+                <input type="number" name="num" min="50" max="80">  
+                <input type="submit"> 
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Range
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <label for="vol">Volume (between 0 and 50):</label>
+                <input type="range" id="vol" name="vol" min="0" max="50">
+                <input type="submit">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Search
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <label for="gsearch">Search Google:</label>
+                <input type="search" id="gsearch" name="gsearch">
+                <input type="submit">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Reset
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <input type="reset">
+            </td>
+        </tr>
+        <tr>
+            <th>
+               <h4>
+                   Input type Time
+               </h4>
+            </th>
+            <td>
+                <br><br>
+                <label for="appt">Select a time:</label>
+                <input type="time" id="appt" name="appt">   
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type URL
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <label for="homepage">Add your homepage:</label>
+                <input type="url" id="homepage" name="homepage">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <h4>
+                    Input type Week
+                </h4>
+            </th>
+            <td>
+                <br><br>
+                <label for="week">Select a week:</label>
+                <input type="week" id="week" name="week">
+            </td>
+        </tr>
+    </table> </center>
+   <!--
+    
+        
+        
+        <br><br>
+        
+        <br><br>
+            <h4>Range Sample: </h4>
+           
+            <br><br>
+            <h4>Search Sample: </h4><br>
+            
+            <br><br>
+            Reset Sample: <br>
+            
+            <br><br>
+            Time Sample: <br>
+            
+            <br><br>
+            URL Sample: <br>
+            
+            <br><br>
+            Week Sample: <br> 
+           
+
+    </form> 
+    </form>  
+-->
+</body>
+</html>
