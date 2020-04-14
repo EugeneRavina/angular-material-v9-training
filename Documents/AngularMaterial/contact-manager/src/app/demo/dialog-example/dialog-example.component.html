@@ -1,0 +1,13 @@
+<div mat-dialog-content>
+  <p>ID Number: {{data.users.id}}</p>
+  <p>Name: {{data.users.name}}</p>
+  <p>Username : {{data.users.username}} </p>
+  <p>Email : {{data.users.email}} </p>
+  <p>Phone : {{data.users.phone}} </p>
+  <p>Website : {{data.users.website}} </p>
+ 
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

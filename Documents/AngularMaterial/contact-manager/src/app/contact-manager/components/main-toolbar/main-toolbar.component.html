@@ -1,0 +1,38 @@
+
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <!-- <p><mat-checkbox [(ngModel)]="opened"></mat-checkbox></p> -->
+        
+
+        
+        <span> Contact Manager</span>
+        
+        <span class="example-spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            New Contact
+          </button>
+          <button mat-menu-item
+           (click)="toggleTheme.emit()">
+            Toggle Theme
+          </button>
+          <button mat-menu-item
+           (click)="toggleDir.emit()">
+            Toggle Dir
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+
+      <!-- <app-button></app-button>
+      <app-mat-card></app-mat-card> -->
+      <!-- <app-form-control></app-form-control>
+       -->
+
+
+    
+
