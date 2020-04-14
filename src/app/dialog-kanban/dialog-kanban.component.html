@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{this.data.title}}</h2>
+
+<mat-dialog-content>
+    <p class="mat-subtitle title">{{this.data.ticketId}}</p>
+    <p class="mat-subtitle">Write a description</p>
+    
+</mat-dialog-content>
+
+    <mat-icon color="{{this.data.priority.color}}">{{this.data.priority.icon}}</mat-icon>
+    <br>
+    <mat-icon mat-card-avatar color="{{this.data.issueType.color}}">{{this.data.issueType.icon}}</mat-icon>
+
+<mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>Ok</button>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
