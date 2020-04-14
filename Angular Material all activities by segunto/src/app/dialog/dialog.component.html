@@ -1,0 +1,45 @@
+
+<div class ="diag"><h2>Click the button below</h2>
+
+<button
+  mat-raised-button
+  (click)="openDialog()"
+  mat-raised-button
+  color="accent"
+>
+  Enter your info
+</button>
+</div>
+<mat-card class="example-card">
+  <h2>Your Input as follows:</h2>
+
+  <div class="content">
+    <mat-card-content>
+      <label *ngIf="firstName">
+        <p>First name: {{ firstName }}</p>
+      </label>
+
+      <label *ngIf="lastName">
+        <p>Last name: {{ lastName }}</p>
+      </label>
+
+      <label *ngIf="birthday">
+        <p>Birthday: {{ birthday }}</p>
+      </label>
+      <h2>Address Information</h2>
+      <label *ngIf="street">
+        <p>Street: {{ street }}</p>
+      </label>
+
+      <label *ngIf="city">
+        <p>City: {{ city }}</p>
+      </label>
+      <label *ngIf="zipcode">
+        <p>Zipcode: {{ zipcode }}</p>
+      </label>
+      <label *ngIf="country">
+        <p>Country: {{ country }}</p>
+      </label>
+    </mat-card-content>
+  </div>
+</mat-card>

@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Hi! Please enter your personal information </h1>
+<div mat-dialog-content>
+  
+  <mat-form-field>
+    <mat-label>First Name</mat-label>
+    <input matInput [(ngModel)]="data.firstName">
+  </mat-form-field>
+  <mat-form-field class="lastname">
+    <mat-label>Last Name</mat-label>
+    <input matInput [(ngModel)]="data.lastName">
+  </mat-form-field>
+  <mat-form-field class= "date">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [(ngModel)]="data.birthday" [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<h1 mat-dialog-title>Please enter your address information </h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Enter Street</mat-label>
+    <input matInput [(ngModel)]="data.street">
+  </mat-form-field>
+
+    <mat-form-field class="city">
+      <mat-label>Select City</mat-label>
+      <select matNativeControl required [(ngModel)]="data.city">
+          <option value="Manila City">Manila</option>
+          <option value="Caloocan City">Caloocan</option>
+          <option value="Quezon City">Quezon City</option>
+          <option value="Pasig City">Pasig</option>
+        </select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter Zipcode</mat-label>
+      <input matInput [(ngModel)]="data.zipcode">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select Country</mat-label>
+      <select matNativeControl required [(ngModel)]="data.country">
+          <option value="Philippines">Philippines</option>
+          <option value="U.S.A">U.S.A</option>
+          <option value="China">China</option>
+          
+        </select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" color="warn">Back</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Enter</button>
+</div>

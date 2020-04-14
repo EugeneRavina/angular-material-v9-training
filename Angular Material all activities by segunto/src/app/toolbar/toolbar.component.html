@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Contact Manager</span>
+
+      <span class="example-spacer"></span>
+
+ <mat-menu #menu="matMenu">
+   <button mat-menu-item>New Contact</button>
+   <button mat-menu-item>Toggle Theme</button>
+   <button mat-menu-item>Toggle Direction</button>
+ </mat-menu>
+ <button mat-icon-button [matMenuTriggerFor] ="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+    </mat-toolbar-row>
+
+   
+  </mat-toolbar>
+  
