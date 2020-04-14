@@ -1,0 +1,64 @@
+<h1 mat-dialog-title>Personal Information</h1>
+<div mat-dialog-content class="main-div">
+    <div>
+        <div>
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput [(ngModel)]="data.fname">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput [(ngModel)]="data.lname">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Birthday</mat-label>
+                <input matInput [matDatepicker]="picker3" [(ngModel)]="data.bday" autocomplete="off" placeholder="placeholder only">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3 color="primary"></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div>
+            <mat-form-field>
+                <mat-label>Street</mat-label>
+                <input matInput [(ngModel)]="data.street">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>City</mat-label>
+                <mat-select [(ngModel)]="data.city">
+                    <mat-option *ngFor="let city of cities" [value]="city.value">
+                        {{city.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>ZipCode</mat-label>
+                <input matInput [(ngModel)]="data.zip" type="number">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Country</mat-label>
+                <mat-select [(ngModel)]="data.country">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Add</button>
+</div>

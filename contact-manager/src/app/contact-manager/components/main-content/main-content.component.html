@@ -1,0 +1,27 @@
+<mat-sidenav-content class="side-nav-content">
+    <app-main-toolbar (x)="printBook($event)" (y)="printTheme($event)"></app-main-toolbar>
+
+  <div class="wrapper">
+    <app-kanban-board-finals></app-kanban-board-finals>
+    <!-- <app-button></app-button>
+    <app-mat-card></app-mat-card>
+    <app-mat-tabs></app-mat-tabs>
+    <app-contact-card></app-contact-card> -->
+    <!-- <app-form-control></app-form-control> -->
+    <!-- <app-stepper></app-stepper> -->
+    <!-- <app-mat-modals></app-mat-modals> -->
+    <!-- <app-mat-modal-activity></app-mat-modal-activity> -->
+    <!-- <app-mat-tables></app-mat-tables> -->
+    <!-- <div class="flex" *ngIf="users">
+      <mat-card class="example-card mat-elevation-z10" *ngFor="let user of users">
+      <div class="contact-card-header">
+        <img class="image-circle" [src]="userImage(user.id)" alt="image" (click)="openDialog(user.name,user.email,user.phone,user.username,user.website,user.company.name)">
+      </div>
+      <div class="justify-content-center">
+        <h2>{{user.name}}</h2>
+      </div>
+    </mat-card>
+    </div> -->
+  </div>
+
+</mat-sidenav-content>

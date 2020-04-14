@@ -1,0 +1,61 @@
+.example-button-row button,
+.example-button-row a {
+    margin-right: 8px;
+}
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.sample-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+.wrapper{
+    margin: 15px;
+}
+.side-nav-content{
+    margin-left: 0px!important;
+}
+
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+}
+.example-card{
+    width: 250px;
+    min-height: 200px;
+    max-height: 300px;
+    margin:20px;
+}
+.contact-card-header{
+    display:flex;
+    background-color: blue($color: #000000);
+    justify-content: center;
+}
+.contact-card-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+.justify-content-center{
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+}
+.image-circle{
+    border-radius: 100px;
+}
+
+.mat-drawer-content.mat-sidenav-content.side-nav-content{
+    margin: auto 0px!important;
+}

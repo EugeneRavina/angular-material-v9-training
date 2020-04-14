@@ -1,0 +1,82 @@
+<h1>KANBAN BOARD</h1>
+<div class="main-container">
+    <div class="example-container">
+        <h2>To do</h2>
+    
+        <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo"
+            [cdkDropListConnectedTo]="[doneList,inDevList,inTestList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <mat-card class="example-card example-box" *ngFor="let item of todo" cdkDrag (click)="openDialog(item)">
+                <mat-card-header>
+                    <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                    <mat-card-subtitle>{{item.ticketId}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content class="left">
+                    <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    
+    <div class="example-container">
+        <h2>In Dev</h2>
+    
+        <div cdkDropList #inDevList="cdkDropList" [cdkDropListData]="inDev"
+            [cdkDropListConnectedTo]="[doneList,todoList,inTestList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <mat-card class="example-card example-box" *ngFor="let item of inDev" cdkDrag (click)="openDialog(item)">
+                <mat-card-header>
+                    <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                    <mat-card-subtitle>{{item.ticketId}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content class="left">
+                    <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    
+    <div class="example-container">
+        <h2>In Test</h2>
+    
+        <div cdkDropList #inTestList="cdkDropList" [cdkDropListData]="inTest"
+            [cdkDropListConnectedTo]="[doneList,inDevList,todoList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div>
+                <mat-card class="example-card example-box" *ngFor="let item of inTest" cdkDrag (click)="openDialog(item)">
+                    <mat-card-header>
+                        <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                        <mat-card-title>{{item.title}}</mat-card-title>
+                        <mat-card-subtitle>{{item.ticketId}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="left">
+                        <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    
+    <div class="example-container">
+        <h2>Done</h2>
+    
+        <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done"
+            [cdkDropListConnectedTo]="[inTestList,inDevList,todoList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div *ngFor="let item of done">
+                <mat-card class="example-card example-box" cdkDrag (click)="openDialog(item)">
+                    <mat-card-header>
+                        <mat-icon mat-card-avatar color="{{item.issueType.color}}">{{item.issueType.icon}}</mat-icon>
+                        <mat-card-title>{{item.title}}</mat-card-title>
+                        <mat-card-subtitle>{{item.ticketId}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="left">
+                        <mat-icon color="{{item.priority.color}}">{{item.priority.icon}}</mat-icon>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

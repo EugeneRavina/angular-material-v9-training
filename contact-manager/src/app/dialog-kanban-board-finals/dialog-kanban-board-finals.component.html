@@ -1,0 +1,21 @@
+<h2>{{data.title}}</h2>
+<h3>{{data.ticketId}}</h3>
+<mat-form-field class="example-full-width">
+    <mat-label>Description:</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel...">{{data.description}}</textarea>
+</mat-form-field>
+<div>
+    <h3 class="inline">Priority: </h3>
+    <mat-icon color="{{data.priority.color}}">{{data.priority.icon}}</mat-icon>
+    <h2 class="inline margin">{{data.priority.name}}</h2>
+</div>
+<div>
+    <h3 class="inline">Issue Type: </h3>
+    <mat-icon color="{{data.issueType.color}}">{{data.issueType.icon}}</mat-icon>
+    <h2 class="inline margin">{{data.issueType.name}}</h2>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

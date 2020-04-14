@@ -1,0 +1,18 @@
+.inline{
+    display: inline-block;
+}
+.margin{
+    margin: 0px 20px;
+}
+div{
+    margin:20px 0px ;
+}
+div:last-child{
+    margin-bottom:0px!important;
+}
+.example-full-width {
+    width: 100%;
+}
+h3{
+    min-width: 100px;
+}

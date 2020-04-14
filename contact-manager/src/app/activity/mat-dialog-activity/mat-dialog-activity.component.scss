@@ -1,0 +1,12 @@
+.main-div > div{
+    display:flex;
+    flex-wrap:wrap;
+}
+.main-div > div > div{
+    width: calc(50% - 20px);
+    margin:auto;
+}
+
+.main-div > div > div:last-child{
+    margin-left: 10px!important;
+}
