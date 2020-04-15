@@ -1,0 +1,20 @@
+<mat-sidenav-container class="example-container dark-theme"
+[class.dark-theme]="isDarktheme" [dir]="dir">
+    <mat-sidenav #sidenav mode="side" opened class="app-sidenav mat-elevation-z10">
+      <mat-toolbar color="primary">
+        Contacts
+      </mat-toolbar>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <app-main-toolbar
+      (toggleTheme)="toggleTheme()"
+      (toggleDir)="toggleDir()"></app-main-toolbar>
+        
+    </mat-sidenav-content>
+  </mat-sidenav-container>

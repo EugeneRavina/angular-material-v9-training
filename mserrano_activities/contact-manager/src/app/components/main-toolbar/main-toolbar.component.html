@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!-- <p><mat-checkbox [(ngModel)]="opened"></mat-checkbox></p> -->
+      
+      <!-- (click)="sidenav.toggle()"  -->
+        <button mat-raised-button color="primary">
+          <mat-icon>view-headline</mat-icon>
+        </button>
+      
+      <span> Contact Manager</span>
+      
+      <span class="example-spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>add</mat-icon>
+          <span>New Contact</span>
+        </button>
+        <button mat-menu-item (click)="toggleTheme.emit()">
+          <mat-icon>voicemail</mat-icon>
+          <span>Toggle Theme</span>
+        </button>
+        <button mat-menu-item (click)="toggleDir.emit()">
+          <mat-icon>notifications_off</mat-icon>
+          <span>Toggle dir</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class = "wrappper">
+    <!-- <app-button></app-button>
+     -->
+    <!-- <app-forms-control></app-forms-control>
+     -->
+    <app-main-content></app-main-content>
+     <!-- <app-stepper></app-stepper> -->
+  </div>
+  

@@ -1,0 +1,9 @@
+<mat-label>Name : {{ firstName }} {{ lastName }} </mat-label><br><br>
+<mat-label>Birthday : {{bday | date:'d LLLL yyyy' }} </mat-label><br><br>
+<mat-label>Full Address : 
+{{street}} {{city}} {{country}} {{zip}}<br><br>
+</mat-label>
+    
+
+
+<button mat-raised-button (click)="openDialog()">Add Personal Information</button>
