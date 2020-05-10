@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  <strong>Ticket No : </strong><label>{{ data.ticketId }}</label><br><br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..." value="{{ data.description }}"> </textarea>
+  </mat-form-field> <br><br>
+  <label></label>
+  <strong>Priority :</strong>  <mat-icon color="{{data.priority.color}}">{{ data.priority.icon }}</mat-icon> {{data.priority.name}}<br><br>
+  <label>{{ data.estimateHours }}</label><br><br>
+  <strong>Issue Type : </strong> <mat-icon color="{{data.issueType.color}}">{{ data.issueType.icon }}</mat-icon> {{data.issueType.name}}<br><br>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="primary" (click)="onNoClick()">Close</button>
+</div>

@@ -1,0 +1,38 @@
+<mat-sidenav-container class="example-container"
+      [class.dark-theme]="isDarkTheme" [dir]="dir">
+
+  <mat-sidenav #sidenav mode="side" opened class="app-sidenav mat-elevation-z10">
+    <mat-toolbar color="primary">
+      Contacts
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item *ngFor="let user of users">
+        <a matLine [routerLink]="['/contact-manager/', user.id]">
+          <!-- <mat-icon svgIcon="{{user.avatar}}"></mat-icon> -->
+          <img class="image-circle" [src]="userImage(user.id)" width="30px" height="30px">
+          <span>{{ user.name }}</span>
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <div class="app-side-nav-content">
+
+      <app-main-toolbar
+          (toggleTheme)="toggleTheme()"
+          (toggleDir)="toggleDir()"></app-main-toolbar>
+
+      <div class="wrapper">
+        <!-- <router-outlet></router-outlet> -->
+        <app-main-content></app-main-content>
+      </div>
+
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
